@@ -492,3 +492,144 @@ body {
   color: #666;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
+
+._header {
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  right: 0;
+  left: 0;
+  margin: 0;
+  height: 80px;
+  background-image: url(/assets/img/header-bg.png); }
+  ._header ._toggle {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    margin-top: 10px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer; }
+    ._header ._toggle:selection {
+      background: transparent; }
+    ._header ._toggle span,
+    ._header ._toggle span:before,
+    ._header ._toggle span:after {
+      content: "";
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: #fff;
+      position: relative;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out; }
+    ._header ._toggle span:before {
+      top: 12px; }
+    ._header ._toggle span:after {
+      top: -14px; }
+    ._header ._toggle.is-open span {
+      background: transparent; }
+    ._header ._toggle.is-open span:before,
+    ._header ._toggle.is-open span:after {
+      -webkit-transform-origin: center;
+          -ms-transform-origin: center;
+              transform-origin: center;
+      -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
+      top: 0; }
+    ._header ._toggle.is-open span:after {
+      -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+  ._header ._logo {
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
+    position: absolute;
+    margin: 27px;
+    height: 26px;
+    width: 150px;
+    right: 0;
+    background-image: url(/assets/img/GLFLC-logo.png);
+    background-repeat: no-repeat;
+    cursor: pointer; }
+
+._navigation {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  padding: 30px 0 20px;
+  -webkit-transform: translate(-100%);
+      -ms-transform: translate(-100%);
+          transform: translate(-100%);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 1; }
+  ._navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  ._navigation li {
+    text-align: center;
+    margin-bottom: 10px; }
+
+._navigation.is-open {
+  display: block;
+  -webkit-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+          transform: translateY(0%);
+  left: 0; }
+
+._hero {
+  position: absolute;
+  left: 0;
+  margin: 13em 0 0 45em;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+              -ms-grid-row-align: center;
+          align-items: center;
+  height: 230px;
+  width: 697px;
+  background-image: url(/assets/img/GLFLC-hero.png);
+  background-repeat: no-repeat; }
+
+._school {
+  position: absolute;
+  left: 0;
+  margin: 35.4em 0 0 48em;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+              -ms-grid-row-align: center;
+          align-items: center;
+  height: 493px;
+  width: 613px;
+  background-image: url(/assets/img/GLFLC-school.png);
+  background-repeat: no-repeat; }
+
+.home-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  height: 100vh;
+  background: #0084ff; }
+  .home-wrap ._splash-page-shadow {
+    position: relative;
+    margin-left: 70em;
+    height: 100%;
+    width: 50%;
+    opacity: 0.1;
+    background: #fff; }

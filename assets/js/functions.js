@@ -1,10 +1,11 @@
 $(function() {
-  setInterval(function(){worksJelly()}, 4000);
-
+  navBar();
 });
 
-function worksJelly(){
-  var randNum = Math.floor(Math.random() * $('.des-img').length) + 1
-  $('.des-img').eq(randNum).addClass('is-emph')
-    .siblings().removeClass('is-emph');
+function navBar() {
+  $('._toggle').on('click', function(){
+    var status = $(this).hasClass('is-open');
+    if(status){ $('._toggle, ._navigation').removeClass('is-open'); }
+    else { $('._toggle, ._navigation').addClass('is-open'); }
+  });
 }

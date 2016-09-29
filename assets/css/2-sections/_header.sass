@@ -1,0 +1,88 @@
+._header
+  position: absolute
+  display: flex
+  right: 0
+  left: 0
+  margin: 0
+  height: 80px
+  background:
+    image: url(/assets/img/header-bg.png)
+
+  ._toggle
+    display: flex
+    width: 50px
+    height: 50px
+    //background: pink
+    margin-left: 20px
+    margin-top: 10px
+    align-items: center
+    cursor: pointer
+
+    &:selection
+      background: transparent
+
+    span,
+    span:before,
+    span:after
+      content: ""
+      display: block
+      height: 2px
+      width: 100%
+      background: #fff
+      position: relative
+
+      transition: all 0.3s ease-in-out
+
+    span:before
+      top: 12px
+
+    span:after
+      top: -14px
+
+    &.is-open span
+      background: transparent
+
+    &.is-open span:before,
+    &.is-open span:after
+      transform-origin: center
+      transform: rotate(45deg)
+      top: 0
+
+    &.is-open span:after
+      transform: rotate(-45deg)
+
+  ._logo
+    +hide-text
+    position: absolute
+    margin: 27px
+    height: 26px
+    width: 150px
+    right: 0
+    background:
+      image: url(/assets/img/GLFLC-logo.png)
+      repeat: no-repeat
+    cursor: pointer
+
+._navigation
+  display: none
+  position: absolute
+  width: 100%
+  background: #fff
+  padding: 30px 0 20px
+  transform: translate(-100%)
+  transition: all 0.3s ease-in-out
+  z-index: 1
+
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+
+  li
+    text-align: center
+    margin-bottom: 10px
+
+._navigation.is-open
+      display: block
+      transform: translateY(0%)
+      left: 0
