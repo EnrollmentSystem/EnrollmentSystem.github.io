@@ -75,9 +75,13 @@
   margin-top: 80px
   background: #fff
   padding: 30px 0 20px
-  transform: translate(-100%)
-  transition: all 0.3s ease-in-out
   z-index: 1
+
+  animation:
+    name: navigation
+    duration: 700ms
+    transition-timing-function: ease-in-out
+
 
   ul
     list-style: none
@@ -85,8 +89,27 @@
     padding: 0
 
   li
+    opacity: 0
     text-align: center
     margin-bottom: 10px
+
+    @for $i from 1 through 6
+      &:nth-child(#{$i})
+        animation:
+          name: menu
+          duration: 600ms
+          delay: (500ms * $i) - 600
+          transition-timing-function: ease-in-out
+          fill-mode: forwards
+
+  @keyframes menu
+    0%
+      opacity: 0
+      transform: rotateY(-90deg) translateY(30px)
+
+    100%
+      opacity: 1
+      transform: rotateY(0deg) translateY(0px)
 
 ._navigation.is-open
       display: block
