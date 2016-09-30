@@ -1,72 +1,78 @@
 ._header
   position: absolute
-  display: flex
-  right: 0
   left: 0
-  margin: 0
   height: 80px
+  width: 100%
   background:
     image: url(/assets/img/header-bg.png)
 
-  ._toggle
+
+  ._header-inner
+    position: relative
+    width: 960px
     display: flex
-    width: 50px
-    height: 50px
-    //background: pink
-    margin-left: 20px
-    margin-top: 10px
-    align-items: center
-    cursor: pointer
+    justify-content: space-between
+    flex-direction: row
+    margin: 30px auto
 
-    &:selection
-      background: transparent
 
-    span,
-    span:before,
-    span:after
-      content: ""
-      display: block
-      height: 2px
-      width: 100%
-      background: #fff
-      position: relative
+    ._logo
+      +hide-text
+      height: 26px
+      width: 110px
+      right: 0
+      background:
+        image: url(/assets/img/GLFLC-logo.png)
+        repeat: no-repeat
+      cursor: pointer
 
-      transition: all 0.3s ease-in-out
+    ._toggle
+      display: flex
+      width: 50px
+      height: 25px
+      //background: pink
+      align-items: center
+      cursor: pointer
 
-    span:before
-      top: 12px
+      &:selection
+        background: black
 
-    span:after
-      top: -14px
+      span,
+      span:before,
+      span:after
+        content: ""
+        display: block
+        height: 2px
+        width: 100%
+        background: #fff
+        position: relative
 
-    &.is-open span
-      background: transparent
+        transition: all 0.3s ease-in-out
 
-    &.is-open span:before,
-    &.is-open span:after
-      transform-origin: center
-      transform: rotate(45deg)
-      top: 0
+      span:before
+        top: 12px
 
-    &.is-open span:after
-      transform: rotate(-45deg)
+      span:after
+        top: -14px
 
-  ._logo
-    +hide-text
-    position: absolute
-    margin: 27px
-    height: 26px
-    width: 150px
-    right: 0
-    background:
-      image: url(/assets/img/GLFLC-logo.png)
-      repeat: no-repeat
-    cursor: pointer
+      &.is-open span
+        background: transparent
+
+      &.is-open span:before,
+      &.is-open span:after
+        transform-origin: center
+        transform: rotate(45deg)
+        top: 0
+
+      &.is-open span:after
+        transform: rotate(-45deg)
 
 ._navigation
   display: none
   position: absolute
   width: 100%
+  left: 0
+  margin-top: 80px
   background: #fff
   padding: 30px 0 20px
   transform: translate(-100%)
@@ -85,4 +91,4 @@
 ._navigation.is-open
       display: block
       transform: translateY(0%)
-      left: 0
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)

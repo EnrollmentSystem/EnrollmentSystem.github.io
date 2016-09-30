@@ -1,18 +1,15 @@
 mixin nav-content()
   ul
+    li: a(href="#home") Home
     li: a(href="#about") About
-    li: a(href="#youtube") YouTube
-    //li: a(href="#mentoring") Mentoring
-    li: a(href="#articles") Articles
-    li: a(href="#vine") Vine
-    li: a(href="#design") Design
-    li: a(href="#notes") Notes
-    li: a(href="#podcast") Podcast
-    li: a(href="#contact") Contact
+    li: a(href="#login") Login
+
 
 ._navigation
   +nav-content()
 
 ._header
-  ._toggle: span
-  ._logo
+  ._header-inner
+    ._toggle: span
+    ._logo
+      h1 GLFLC

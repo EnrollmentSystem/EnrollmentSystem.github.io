@@ -1,8 +1,8 @@
 $(function() {
-  navBar();
+  navbar();
 });
 
-function navBar() {
+function navbar() {
   $('._toggle').on('click', function(){
     var status = $(this).hasClass('is-open');
     if(status){ $('._toggle, ._navigation').removeClass('is-open'); }
